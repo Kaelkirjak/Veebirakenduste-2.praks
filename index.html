@@ -1,19 +1,105 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
 <head>
-
+    <style>
+      table, th, td {
+        border: 1px solid black;
+      }
+    </style>
     <meta charset="UTF-8">
-
     <link rel="icon" href="res/images/favicon.ico">
-
     <title>My Dashboard</title>
-
 </head>
-
 <body>
-
+  <header>
+    <strong>Welcome to your dashboard!</strong>
+  </header>
+  <section>
+    <div>
+        <img src="res/images/me.png" alt="My picture">
+    </div>
+    <div>
+        <ul>
+            <li>John Doe</li>
+            <li>27/06/1993</li>
+            <li>Software Engineering</li>
+        </ul>
+    </div>
+    <div>
+        <strong>2.65</strong>
+    </div>
+</section>
+<section>
+    <h1>Courses</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Course Title</th>
+            <th>Semester</th>
+            <th>Grade</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td><a href="https://courses.cs.ut.ee/2020/ASD/fall" target="_blank">Agile software development</a></td>
+            <td>Semester 1 fall</td>
+            <td>82</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><a href="https://courses.cs.ut.ee/2020/sm/fall" target="_blank">System modeling</a></td>
+            <td>Semester 1 spring</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><a href="https://courses.cs.ut.ee/2020/RE/fall" target="_blank">Requirements Engineering</a></td>
+            <td>Semester 2 spring</td>
+            <td>99</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><a href="https://courses.cs.ut.ee/2020/ResSemSE/fall" target="_blank">Research Seminar in Software Engineering</a></td>
+            <td>Semester 2 fall</td>
+            <td>65</td>
+        </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td><button type="button">Add new course</button></td>
+          </tr>
+          <tr>
+            <td>
+              <form action="/action_page.php" method="get">
+                Title:
+                <input type="text" name="title">
+                Semester:
+                <select id="semester" name="semester" form="form">
+                  <option value="S1f">Semester 1 fall</option>
+                  <option value="S1s">Semester 1 spring</option>
+                  <option value="S2f">Semester 2 fall</option>
+                  <option value="S2s">Semester 2 spring</option>
+                </select>
+                Grade:
+                <input type="number" value="number" max="100" min="0">
+              </form>
+            </td>
+          </tr>
+        </tfoot>
+    </table>
+</section>
+<footer>
+    <ul>
+        <li>
+            <a href="https://ois2.ut.ee/" target="_blank">OIS</a>
+        </li>
+        <li>
+            <a href="https://courses.cs.ut.ee/" target="_blank">Courses</a>
+        </li>
+    </ul>
+</footer>
 </body>
-
 </html>
