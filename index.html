@@ -68,26 +68,24 @@
         </tr>
         </tbody>
         <tfoot>
-          <tr>
-            <td><button type="button">Add new course</button></td>
-          </tr>
-          <tr>
-            <td>
-              <form action="/action_page.php" method="get">
-                Title:
-                <input type="text" name="title">
-                Semester:
-                <select id="semester" name="semester" form="form">
-                  <option value="S1f">Semester 1 fall</option>
-                  <option value="S1s">Semester 1 spring</option>
-                  <option value="S2f">Semester 2 fall</option>
-                  <option value="S2s">Semester 2 spring</option>
-                </select>
-                Grade:
-                <input type="number" value="number" max="100" min="0">
-              </form>
-            </td>
-          </tr>
+        <tr>
+          <td colspan="4"><button type="button">Add new course</button></td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <form>
+              Title: <input type="text" name="title">
+              Semester:
+              <select id="semester" name="semester">
+                <option value="S1f">Semester 1 fall</option>
+                <option value="S1s">Semester 1 spring</option>
+                <option value="S2f">Semester 2 fall</option>
+                <option value="S2s">Semester 2 spring</option>
+              </select>
+              Grade: <input type="number" name="grade" value="number" max="100" min="0">
+            </form>
+          </td>
+        </tr>
         </tfoot>
     </table>
 </section>
